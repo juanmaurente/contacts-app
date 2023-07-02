@@ -4,7 +4,7 @@ const Header = () => {
 	return (
 		<div className='header'>
 			<h2>Contacts</h2>
-			<input type='text' />
+			<input type='text' placeholder='Search...' />
 		</div>
 	);
 };

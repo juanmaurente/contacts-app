@@ -17,7 +17,7 @@ const getInitials = (name: string) => {
 const ContactCard: React.FC<Props> = ({ contact }) => {
 	return (
 		<div className='contact-card'>
-			<div className='circle'>{getInitials(contact.name)}</div>
+			<div className='circle--small'>{getInitials(contact.name)}</div>
 			<div className='contact-details'>
 				<h3>{contact.name}</h3>
 				<p>Phone: {contact.phone}</p>

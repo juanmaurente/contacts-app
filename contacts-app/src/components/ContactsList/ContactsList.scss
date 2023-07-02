@@ -15,7 +15,9 @@
 
 @media screen and (min-width: 1024px) {
 	.contacts-list {
-		background-color: yellow;
+		min-width: 480px;
+		height: 80vh;
+		overflow-y: scroll;
 		grid-column: 1 / 2;
 		grid-row: 2;
 	}

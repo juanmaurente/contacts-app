@@ -12,6 +12,8 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-text-size-adjust: 100%;
+	display: flex;
+	justify-content: center;
 }
 
 a {
@@ -54,6 +56,32 @@ button:hover {
 button:focus,
 button:focus-visible {
 	outline: 4px auto -webkit-focus-ring-color;
+}
+
+.circle--small {
+	width: 50px;
+	height: 50px;
+	background-color: #4da1b6;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 50px;
+	font-weight: bold;
+	margin-right: 20px;
+	color: #eee;
+}
+
+.circle--big {
+	width: 120px;
+	height: 120px;
+	background-color: #4da1b6;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	line-height: 50px;
+	font-weight: bold;
+	font-size: 35px;
+	color: #eee;
 }
 
 @media (prefers-color-scheme: light) {

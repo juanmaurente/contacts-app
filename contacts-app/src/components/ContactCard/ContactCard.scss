@@ -1,25 +1,31 @@
 .contact-card {
-	padding-left: 10px;
-	background-color: blue;
+	margin: 10px 10px;
 	display: flex;
 	align-items: center;
-	border: 1px solid white;
+	border: 1px solid #4242422f;
 	padding: 20px;
-	border-radius: 10px;
+	border-radius: 20px;
+	transition: all ease 0.5s;
 }
 
-.circle {
-	width: 50px;
-	height: 50px;
-	background-color: #ccc;
-	border-radius: 50%;
-	text-align: center;
-	line-height: 50px;
-	font-weight: bold;
-	margin-right: 20px;
+.contact-card:hover {
+	border: 1px solid #4242424f;
+	transform: scale(1.02);
+	cursor: pointer;
+	background-color: #57585811;
+	box-shadow: 13px 24px 76px -10px rgba(87, 79, 79, 0.51);
 }
+
 .contact-details {
 	padding-left: 20px;
-	border-left: 1px solid white;
+	border-left: 1px solid #eee;
 	text-align: left;
+}
+
+.contact-details {
+	color: rgba(71, 71, 71, 0.9);
+}
+
+.contact-details h3 {
+	font-weight: 600;
 }
