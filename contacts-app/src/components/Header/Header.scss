@@ -1,0 +1,27 @@
+.header {
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.header input {
+	width: 80%;
+	height: 40px;
+	border: 0;
+	border-radius: 20px;
+}
+
+@media screen and (min-width: 1024px) {
+	.header {
+		width: auto;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		padding-left: 10px;
+	}
+	.header input {
+		width: 200px;
+	}
+}

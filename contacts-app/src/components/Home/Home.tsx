@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Home.scss';
+import Header from '../Header/Header';
 
 interface Contact {
 	id: number;
@@ -22,10 +23,7 @@ const Main = () => {
 
 	return (
 		<div className='container'>
-			<div className='header'>
-				<h2>Contacts</h2>
-				<input type='text' />
-			</div>
+			<Header />
 			<div className='contacts-list'>
 				<ul>
 					{contacts.map((contact) => (
