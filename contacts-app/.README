@@ -1,0 +1,80 @@
+# Title: Contacts App
+
+## Demo & Snippets
+
+-   Hosted Link: [Contacts App Demo](https://example.com)
+-   Images: ![Contacts App Screenshot](./screenshots/contacts-app.png)
+
+---
+
+## Requirements / Purpose
+
+-   MVP: A responsive "Contacts" application that allows the user to browse their contacts.
+-   The purpose of the project is to showcase fetching data from an API, displaying it in a visually appealing format, and demonstrating the use of Sass for styling and unit testing for functional components.
+-   Stack used: React, Vite, TypeScript, Sass, React Testing Library.
+
+---
+
+## Build Steps
+
+1. Clone the repository.
+2. Navigate to the project directory.
+3. Install dependencies: `npm install`.
+4. Start the development server: `npm run dev`.
+5. Open your web browser and visit `http://localhost:3000` to see the app running.
+
+---
+
+## Design Goals / Approach
+
+-   Design Goals: Create a visually appealing and responsive "Contacts" application.
+-   The app uses modern design principles with a clean and intuitive user interface.
+-   Sass is used for styling to enhance maintainability and reusability of styles.
+-   React functional components are utilized for efficient rendering and component reusability.
+-   Unit testing is implemented using React Testing Library to ensure component functionality and maintain code quality.
+
+---
+
+## Features
+
+-   Fetches contact data from the JSONPlaceholder API (/users).
+-   Displays a list of contacts with their names, emails, and phone numbers.
+-   Responsive design that adapts to different screen sizes.
+-   Utilizes Sass for styling to create an aesthetically pleasing UI.
+
+---
+
+## Known issues
+
+-   None at the moment.
+
+---
+
+## Future Goals
+
+-   Implement create, update, and delete functionality for contacts.
+-   Add search and filter options for easier contact browsing.
+-   Enhance the user interface with additional styling and animations.
+
+---
+
+## Change logs
+
+### 02/07/2023 - Initial Setup and Contact List
+
+-   Created the project structure and set up Vite with React and TypeScript.
+-   Fetched contact data from the JSONPlaceholder API and displayed it as a list.
+
+### to be implemented...
+
+---
+
+## What did you struggle with?
+
+-   No major struggles encountered during the development process.
+
+---
+
+## Licensing Details
+
+-   This project is released under the MIT License.
