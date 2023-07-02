@@ -29,15 +29,6 @@
 		grid-template-rows: 100px 1fr;
 		place-items: left;
 	}
-	.contacts-list {
-		grid-column: span 3;
-	}
-
-	.contacts-list {
-		background-color: yellow;
-		grid-column: 1 / 2;
-		grid-row: 2;
-	}
 
 	.contact-display {
 		position: relative;
