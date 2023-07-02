@@ -4,7 +4,7 @@ import './Home.scss';
 import Header from '../Header/Header';
 import { Contact } from '../../utils/Contact';
 import ContactsList from '../ContactsList/ContactsList';
-import ContactDislay from '../ContactDisplay/ContactDislay';
+import ContactDisplay from '../ContactDisplay/ContactDisplay';
 
 const Home = () => {
 	const [contacts, setContacts] = useState<Contact[]>([]);
@@ -29,7 +29,7 @@ const Home = () => {
 				contacts={contacts}
 				setSelectedContact={handleContact}
 			/>
-			<ContactDislay selectedContact={selectedContact} />
+			<ContactDisplay selectedContact={selectedContact} />
 		</div>
 	);
 };

@@ -30,10 +30,13 @@ const ContactDisplay: React.FC<Props> = ({ selectedContact }) => {
 						<FaPhone className='icon' />
 						<p>{selectedContact.phone}</p>
 					</div>
-					<p>
-						<FaEnvelope className='icon' />
-						{selectedContact.email}
-					</p>
+
+					{
+						<div className='contact-field'>
+							<FaEnvelope className='icon' />
+							<p>{selectedContact.email}</p>
+						</div>
+					}
 				</>
 			) : (
 				<h2>Select a Contact</h2>
