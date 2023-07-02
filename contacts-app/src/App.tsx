@@ -1,35 +1,38 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+interface Contact {
+	id: number;
+	name: string;
+	email: string;
+	phone: string;
+	address: string;
+	city: string;
 }
 
-export default App
+const App = () => {
+	const [contacts, setContacts] = useState<Contact[]>([]);
+
+	useEffect(() => {
+		axios
+			.get<Contact[]>('https://jsonplaceholder.typicode.com/users')
+			.then((response) => setContacts(response.data));
+	}, []);
+
+	return (
+		<div>
+			<h1>Contacts</h1>
+			<ul>
+				{contacts.map((contact) => (
+					<li key={contact.id}>
+						<h3>{contact.name}</h3>
+						<p>Email: {contact.email}</p>
+						<p>Phone: {contact.phone}</p>
+					</li>
+				))}
+			</ul>
+		</div>
+	);
+};
+
+export default App;
