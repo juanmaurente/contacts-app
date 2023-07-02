@@ -6,8 +6,11 @@ import { Contact } from '../../utils/Contact';
 import ContactsList from '../ContactsList/ContactsList';
 import ContactDislay from '../ContactDisplay/ContactDislay';
 
-const Main = () => {
+const Home = () => {
 	const [contacts, setContacts] = useState<Contact[]>([]);
+	const [selectedContact, setSelectedContact] = useState<Contact>(
+		{} as Contact,
+	);
 
 	useEffect(() => {
 		axios
@@ -15,13 +18,20 @@ const Main = () => {
 			.then((response) => setContacts(response.data));
 	}, []);
 
+	const handleContact = (contact: Contact) => {
+		setSelectedContact(contact);
+	};
+
 	return (
 		<div className='container'>
 			<Header />
-			<ContactsList contacts={contacts} />
-			<ContactDislay />
+			<ContactsList
+				contacts={contacts}
+				setSelectedContact={handleContact}
+			/>
+			<ContactDislay selectedContact={selectedContact} />
 		</div>
 	);
 };
 
-export default Main;
+export default Home;

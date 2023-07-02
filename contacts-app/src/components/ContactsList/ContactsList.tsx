@@ -4,15 +4,19 @@ import './ContactsList.scss';
 
 interface Props {
 	contacts: Contact[];
+	setSelectedContact: (contact: Contact) => void;
 }
 
-const ContactsList: React.FC<Props> = ({ contacts }) => {
+const ContactsList: React.FC<Props> = ({ contacts, setSelectedContact }) => {
 	return (
 		<div className='contacts-list'>
 			<ul>
 				{contacts.map((contact) => (
 					<li key={contact.id}>
-						<ContactCard contact={contact} />
+						<ContactCard
+							contact={contact}
+							setSelectedContact={setSelectedContact}
+						/>
 					</li>
 				))}
 			</ul>
