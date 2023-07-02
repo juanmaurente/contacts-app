@@ -18,7 +18,22 @@
 	border: 1px solid #eee;
 	border-radius: 15px;
 	margin-bottom: 15px;
-	padding-left: 10px;
+	padding-left: 35px;
+	color: rgba(71, 71, 71, 0.9);
+	font-family: inherit;
+}
+
+.search-container {
+	display: flex;
+	align-items: center;
+}
+
+.search-icon {
+	position: relative;
+	right: -35px;
+	top: -7px;
+	padding: 7px;
+	color: #4da1b6;
 }
 
 @media screen and (min-width: 1024px) {
@@ -35,5 +50,12 @@
 
 	.header input {
 		margin: 0 20px;
+	}
+
+	.search-icon {
+		position: relative;
+		right: -55px;
+		top: 0px;
+		padding: 7px;
 	}
 }

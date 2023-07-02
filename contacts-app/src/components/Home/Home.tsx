@@ -11,6 +11,7 @@ const Home = () => {
 	const [selectedContact, setSelectedContact] = useState<Contact>(
 		{} as Contact,
 	);
+	const [searchQuery, setSearchQuery] = useState<string>('');
 
 	useEffect(() => {
 		axios
@@ -22,11 +23,20 @@ const Home = () => {
 		setSelectedContact(contact);
 	};
 
+	const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
+		const { value } = event.target;
+		setSearchQuery(value);
+	};
+
+	const filteredContacts = contacts.filter((contact) =>
+		contact.name.toLowerCase().includes(searchQuery.toLowerCase()),
+	);
+
 	return (
 		<div className='container'>
-			<Header />
+			<Header handleSearch={handleSearch} />
 			<ContactsList
-				contacts={contacts}
+				contacts={filteredContacts}
 				setSelectedContact={handleContact}
 			/>
 			<ContactDisplay selectedContact={selectedContact} />
