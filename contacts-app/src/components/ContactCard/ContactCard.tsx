@@ -4,11 +4,17 @@ import { Contact } from '../../utils/Contact';
 interface Props {
 	contact: Contact;
 	setSelectedContact: (contact: Contact) => void;
+	setShowContactDisplay: (show: boolean) => void;
 }
 
-const ContactCard: React.FC<Props> = ({ contact, setSelectedContact }) => {
+const ContactCard: React.FC<Props> = ({
+	contact,
+	setSelectedContact,
+	setShowContactDisplay,
+}) => {
 	const handleClick = () => {
 		setSelectedContact(contact);
+		setShowContactDisplay(true);
 	};
 
 	const getInitials = (name: string) => {

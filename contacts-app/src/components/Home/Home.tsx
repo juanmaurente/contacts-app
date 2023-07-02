@@ -12,6 +12,8 @@ const Home = () => {
 		{} as Contact,
 	);
 	const [searchQuery, setSearchQuery] = useState<string>('');
+	const [showContactDisplay, setShowContactDisplay] =
+		useState<boolean>(false);
 
 	useEffect(() => {
 		axios
@@ -21,6 +23,7 @@ const Home = () => {
 
 	const handleContact = (contact: Contact) => {
 		setSelectedContact(contact);
+		setShowContactDisplay(true);
 	};
 
 	const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -32,6 +35,11 @@ const Home = () => {
 		contact.name.toLowerCase().includes(searchQuery.toLowerCase()),
 	);
 
+	const handleCloseContactDisplay = () => {
+		setSelectedContact({} as Contact);
+		setShowContactDisplay(false);
+	};
+
 	return (
 		<div className='container'>
 			<Header handleSearch={handleSearch} />
@@ -39,7 +47,11 @@ const Home = () => {
 				contacts={filteredContacts}
 				setSelectedContact={handleContact}
 			/>
-			<ContactDisplay selectedContact={selectedContact} />
+			<ContactDisplay
+				selectedContact={selectedContact}
+				showContactDisplay={showContactDisplay}
+				onClose={handleCloseContactDisplay}
+			/>
 		</div>
 	);
 };
