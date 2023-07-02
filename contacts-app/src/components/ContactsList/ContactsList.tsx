@@ -5,9 +5,14 @@ import './ContactsList.scss';
 interface Props {
 	contacts: Contact[];
 	setSelectedContact: (contact: Contact) => void;
+	setShowContactDisplay: (show: boolean) => void;
 }
 
-const ContactsList: React.FC<Props> = ({ contacts, setSelectedContact }) => {
+const ContactsList: React.FC<Props> = ({
+	contacts,
+	setSelectedContact,
+	setShowContactDisplay,
+}) => {
 	return (
 		<div className='contacts-list'>
 			<ul>
@@ -16,6 +21,7 @@ const ContactsList: React.FC<Props> = ({ contacts, setSelectedContact }) => {
 						<ContactCard
 							contact={contact}
 							setSelectedContact={setSelectedContact}
+							setShowContactDisplay={setShowContactDisplay}
 						/>
 					</li>
 				))}

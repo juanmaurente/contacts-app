@@ -54,6 +54,7 @@ const Home = () => {
 			<ContactsList
 				contacts={filteredContacts}
 				setSelectedContact={handleContact}
+				setShowContactDisplay={setShowContactDisplay}
 			/>
 
 			{/* Contact display */}
